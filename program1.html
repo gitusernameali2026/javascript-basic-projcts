@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Convetor</title>
+    <link rel="stylesheet" href="program1.css">
+</head>
+<body>
+    <div id="wrap"><!-----------wrap--------->
+        <h2>CM To INCH</h2>
+        <div class="inputdiv">
+            <input type="text" id="input" placeholder="length in cm">
+
+        </div>
+        <div>
+            <button type="submit" onclick="Convert()" id="btn">Click To Convert</button>
+
+        </div>
+        <div id="result">
+
+        </div>
+
+
+    </div><!-------wrap------------->
+    <!------java script dom manupilte-->
+    <script>
+    /* function in button*/
+    function Convert()
+    {
+    let cmvalue= Number(document.getElementById("input").value)
+    let inchvalue = cmvalue/2.54
+    let result1 = document.getElementById("result")
+    result1.innerHTML=inchvalue.toFixed(2)+"Inchs"
+    }
+    
+    </script>
+
+</body>
+</html>
